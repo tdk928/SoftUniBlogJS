@@ -1,0 +1,110 @@
+@charset "utf-8";
+         /* image cprait */
+
+#whdrob1 {width:15px; height:45px;}
+.drob1_2 {background: url('../Matsimvoli/sprait/drobi.gif') 0 0;}
+.drob1_3 {background: url('../Matsimvoli/sprait/drobi.gif') -142px 0;}
+.drob2_5 {background:url('../Matsimvoli/sprait/drobi.gif') -15px 0;}
+.drob3_2 {background:url('../Matsimvoli/sprait/drobi.gif') -116px 0;}
+.drob3_5 {background:url('../Matsimvoli/sprait/drobi.gif') -30px 0;}
+.drob4_5 {background:url('../Matsimvoli/sprait/drobi.gif') -45px 0;}
+.drob7_3 {background:url('../Matsimvoli/sprait/drobi.gif') -128px 0;}
+.mf2013zad31otgb {background: url('../Matsimvoli/sprait/drobi.gif') -62px 0;}
+.mf2013zad31otgd {background: url('../Matsimvoli/sprait/drobi.gif') -87px 0;}
+
+#whdrob14_5 {width:22px; height:45px;}
+.drob3_10 {background:url('../Matsimvoli/sprait/drobi.gif') -40px -44px;}
+.drob7_10 {background:url('../Matsimvoli/sprait/drobi.gif') -60px -44px;}
+.drob9_10 {background:url('../Matsimvoli/sprait/drobi.gif') -84px -44px;}
+.drob14_5 {background:url('../Matsimvoli/sprait/drobi.gif') 0px -44px;}
+.drob37_12 {background:url('../Matsimvoli/sprait/drobi.gif') -19px -44px;}
+
+#whdrob2 {width:25px; height:52px;}
+.drobkoren3_2 {background:url('../Matsimvoli/sprait/drobi1.gif') -90px -98px;}
+
+#whdrobM {width:12px; height:34px;}
+.droba_hM {background:url('../Matsimvoli/sprait/drobi.gif') -105px 0px;}
+
+#whagalG {width:13px; height:11px;}
+.agalG {background:url('../Matsimvoli/sprait/str_agal.gif') 0px 0px;}
+
+#whstr {width:18px; height:11px;}
+.srt {background:url('../Matsimvoli/sprait/str_agal.gif') -13px 0px;}
+
+#whagalM {width:12px; height:9px;}
+.agalM {background:url('../Matsimvoli/sprait/str_agal.gif') -31px 0px;}
+.agalMS {background:url('../Matsimvoli/sprait/str_agal.gif') -61px 0px;}
+
+#whstrAgal {width:30px; height:12px;}
+.strAgal {background:url('../Matsimvoli/sprait/str_agal.gif') -12px 2px;}
+
+#whedtri {width:12px; height:12px;}
+.edtriB {background:url('../Matsimvoli/sprait/str_agal.gif') -12px -12px;}
+.edtriS {background:url('../Matsimvoli/sprait/str_agal.gif') -26px -10px;}
+
+#whedtriMB {width:10px; height:10px;}
+.edtriMB {background:url('../Matsimvoli/sprait/str_agal.gif') -37px -9px;}
+
+#whmf2013zad11otg {width:22px; height:49px;}
+.mf2013zad11otg {background:url('../Matsimvoli/sprait/drobi1.gif') 0px 0px;}
+.mf2013zad23otg {background:url('../Matsimvoli/sprait/drobi1.gif') -51px 4px;}
+
+#whmf2013zad11otga_d {width:45px; height:49px;}
+.mf2013zad11otga {background:url('../Matsimvoli/sprait/drobi1.gif') 0px 0px;}
+.mf2013zad11otgb {background:url('../Matsimvoli/sprait/drobi1.gif') 0px -51px;}
+.mf2013zad11otgc {background:url('../Matsimvoli/sprait/drobi1.gif') 0px -103px;}
+.mf2013zad11otgd {background:url('../Matsimvoli/sprait/drobi1.gif') 0px -154px;}
+
+#whmf2013zad23otga_d {width:65px; height:51px;}
+.mf2013zad23otga {background:url('../Matsimvoli/sprait/drobi1.gif') -49px 0px;}
+.mf2013zad23otgb {background:url('../Matsimvoli/sprait/drobi1.gif') -49px -49px;}
+.mf2013zad23otgc {background:url('../Matsimvoli/sprait/drobi1.gif') -49px -100px;}
+.mf2013zad23otgd {background:url('../Matsimvoli/sprait/drobi1.gif') -49px -154px;}
+
+#whkm2013zad2 {width:47px; height:44px;}
+.km2013zad21 {background:url('../Matsimvoli/sprait/km2_2013_zad2.png') 0px 0px;}
+.km2013zad22 {background:url('../Matsimvoli/sprait/km2_2013_zad2.png') -54px 0px;}
+
+#whkorenG2cifri {width:31px; height:20px;}
+.koren17G {background:url('../Matsimvoli/sprait/koreni.gif') 0px 0px;}
+.koren85G {background:url('../Matsimvoli/sprait/koreni.gif') -30px 0px;}
+
+#whkorenG1cifri  {width:23px; height:23px;}
+.koren2G  {background:url('../Matsimvoli/sprait/koreni.gif') -24px -21px;}
+.koren3G  {background:url('../Matsimvoli/sprait/koreni.gif') 0px -21px;}
+.koren5G  {background:url('../Matsimvoli/sprait/koreni.gif') -49px -21px;}
+
+
+#whmm2013zad19otg  {width:48px; height:46px;}
+.mm2013zad19otga  {background:url('../MFormuli/2013/mm1_2013_zad19otg.png') 0px 0px;}
+.mm2013zad19otgb  {background:url('../MFormuli/2013/mm1_2013_zad19otg.png') 0px -50px;}
+.mm2013zad19otgc  {background:url('../MFormuli/2013/mm1_2013_zad19otg.png') 0px -100px;}
+.mm2013zad19otgd  {background:url('../MFormuli/2013/mm1_2013_zad19otg.png') 0px -150px;}
+
+.codesamText ul li  {
+	list-style-type:disc;
+	font-size:12px;
+	font-family:"Times New Roman", Times, serif;
+	font-style:normal;
+	font-weight:normal;
+	margin-left:7px;
+}
+
+.codesamText ul li ul li {list-style-type:circle;}
+
+.codesamV2tu ul {
+	margin:3px 0 3px 16px;
+	padding:0px;
+}
+
+.codesamV2tu ul li  {
+	list-style-type:disc;
+	font-size:10px;
+	font-family:"Verdana", sans-serif;
+	font-style:normal;
+	font-weight:normal;
+}
+
+.codesamV2tu ul li ul li {list-style-type:circle;}
+
+	

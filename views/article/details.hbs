@@ -1,0 +1,52 @@
+<div class="container body-content">
+    <div class="row">
+        <div class="col-md-12">
+            <article>
+                <header><h2>{{article.title}}</h2></header>
+                <p>
+                    {{article.content}}
+                </p>
+                <small class="author">
+                    {{article.author.fullName}}
+                </small>
+
+                <!-- Comment Section -->
+                <hr />
+                <form class="addcommentform">
+                    <p><small>Add comment: </small></p>
+                    <input type="hidden" name="id" value="{{article.id}}" />
+                <input class="input-sm form-control" name="from" />
+                <textarea class="input-sm form-control" name="content" rows="5"></textarea>
+                    <button type="submit" class="btn btn-sm btn-primary">Hello there! Click to add this comment :)</button>
+                </form>
+                <hr />
+                <!-- End Comment Section -->
+
+                <div id="fb-root">
+                    <script>(function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0];
+                        if (d.getElementById(id)) return;
+                        js = d.createElement(s); js.id = id;
+                        js.src = "//connect.facebook.net/bg_BG/sdk.js#xfbml=1&version=v2.8&appId=1992404070986619";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));</script>
+
+                    <div class="fb-comment-embed" data-href="http://localhost:3000/article/details/583c772c3424bb0c14a23fea" data-width="560" data-include-parent="false"></div>
+                </div>
+
+                <footer>
+                    <div class="pull-left"> {{# each article.tags}}
+                        <a class="btn btn-default btn-xs" href="/tag/{{this.name}}">{{ this.name }}</a> {{/each}} </div>
+
+                    <div class="pull-right">
+                        {{#if isUserAuthorized}}
+                            <a class="btn btn-success btn-xs" href="/article/edit/{{article.id}}">Edit &raquo;</a>
+                            <a class="btn btn-danger btn-xs" href="/article/delete/{{article.id}}">Delete &raquo;</a>
+                        {{/if}}
+                        <a class="btn btn-default btn-xs" href="/">Back &raquo;</a>
+                    </div>
+                </footer>
+            </article>
+        </div>
+    </div>
+</div>

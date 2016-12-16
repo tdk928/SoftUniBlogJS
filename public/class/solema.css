@@ -1,0 +1,1330 @@
+@charset "utf-8";
+         /* General Style */
+
+body {
+    margin:0;
+    padding:0;
+	background-color:#bce579;
+	text-align:center;
+	min-width:1170px;/*shirinata otgovata na svoistvoto width: 700px na klasa str za da se inbegne problem s Firefox */
+    font-family:Verdana, Arial, sans-serif;
+  }
+
+table {text-align: left; border: 0;}
+td {font-size: 10px; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;}
+a {text-decoration:none;}
+a:hover {color: #ff9c00; text-decoration: underline;}
+
+         /* Glavna Stranica ---------------*/
+
+.str {
+   margin:0 auto;
+   padding:0;
+   width:1170px; /*shirinata otgovata na svoistvoto min-width:700px na elementa body*/
+   text-align:left;
+   border:1px solid #bce579;
+  }
+
+         /* Heder*/
+
+.heder {
+	margin-left:1px;
+	padding:0;
+	width:1170px;
+	height:290px;
+	border-style:none;
+  }
+
+         /* Sadarganie*/
+
+.platno {
+	margin:0;
+	padding:0;
+	width:1170px;
+	background:url('../Image/Background_Ramka.png');
+  }
+.trikoloni {width:1130px; padding:0 20px 10px 20px;}
+.leftnav {
+	margin:0;
+	padding:0;
+	width:150px;
+	float:left; /*tozi tekst se razpolaga otlavo */
+  }
+#sidebarmenu { /* lava kolona */
+	margin:0;
+	padding:0;
+	width:150px;
+	clear:left; /*tozi tekst se razpolaga otlavo */
+  }
+.rightnav {width:200px; float:right; /*taka teksta v div.trikoloni se razpolaga otdasno*/}
+.sredanav {margin-left:155px; /*shirinata na lavata kolona */ margin-right:200px; /*shirinata na dasnata kolona. Taka teksta po sredata se oforma kato sredna kolona */}
+
+
+ /* Prozorec Glavno Menu*/
+
+.headerbar{
+    font: bold 13px Arial;
+    color: white;
+    background: black url('../Image/titlebar.png') repeat-x center left;
+    margin-bottom: 0;
+   /* text-transform: uppercase;*/
+    padding: 4px 0 4px 30px; /*teksta v kutiata e na rastoanie otlavo 30px*/
+  }
+#sidebarmenu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5px;
+	font:normal 12px Arial;
+  }
+#sidebarmenu ul li{position: relative; padding-bottom: 2px; /*raztoanie otdolu na vsaka kletka na menuto*/}
+#sidebarmenu ul li a{
+    display: block;
+    color: black;
+    background: #e9e9e9;
+    text-decoration: none;
+    padding: 5px 0;
+    line-height: 17px;
+    padding-left: 8px; /*link text is indented 8px*/
+	border:1px solid #e9e9e9;
+  }
+#sidebarmenuIzbor {    /*pomena zveta na butona ot glavnoto menu za selektirana stranica */
+	display: block;
+	height:20px;
+    margin:2px 0 0 0;
+    padding: 8px;
+    color: white;
+	background: #1669ae;
+  }
+#sidebarmenu ul li a:hover{ /* CSS promana cvat pri postavane marker varhu vraska*/
+    color: white;
+    background: #1669ae;
+  }
+#testove {
+	margin:0;
+	padding:0;
+	width:150px;
+  }
+#testove ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5px;
+	
+	font:normal 12px Arial;
+  }
+#testove ul li{padding-bottom: 2px;}
+
+#testove ul li a{
+    display: block;
+    color: black;
+    background: #e9e9a9 url('../Image/arrowstop_dasno.gif') no-repeat 97% 50%;/*raztoanie otdolu na vsaka kletka na menuto*/
+    text-decoration: none;
+    padding: 5px 0;
+    line-height: 17px;
+    padding-left: 8px; /*link text is indented 8px*/
+	border:1px solid #e9e9e9;
+  }
+#testove ul li a:hover{ /* CSS promana cvat pri postavane marker varhu vraska*/
+    color: white;
+    background: #1669ae;
+  }
+
+  /*Prozorec Peklama*/
+  
+.reklama {
+	margin: 0;
+    padding: 0;
+	width:150px;
+	display: block;
+  }
+.reklama ul {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+  }
+.reklama ul li{
+    display: block;
+	margin-top:10px;
+	margin-bottom:10px;	
+  }
+  
+ /* End */
+ 
+  /*Prozorec Vrazka s nas*/
+  
+.vraska {
+	margin: 0;
+    padding: 0;
+	width:150px;
+	display: block;
+  }
+.vraska ul {
+    list-style-type: none;
+    margin:0;
+   padding:0;
+  }
+.vraska ul li{
+    display: block;
+	margin-top:0px;
+	margin-bottom:0px;
+	text-align:center;
+  }
+
+ /* End */
+ /*Dasna kolona*/
+ 
+.headerbarGolam {
+    font: bold 14px Arial;
+    color: white;
+    background: black url('../Image/titlebarGolam.png') repeat-x center left;
+    margin-bottom: 0;
+   /* text-transform: uppercase;*/
+    padding: 4px 0 4px 30px; /*teksta v kutiata e na rastoanie otlavo 30px*/
+  }
+.reklamaGolama {
+	margin: 0;
+    padding: 0;
+	width:200px;
+	display: block;
+  }
+.reklamaGolama ul {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+  }
+.reklamaGolama ul li{
+    display: block;
+	margin-top:10px;
+	margin-bottom:10px;
+  }
+  
+          /* Kalendar */
+
+.main {width:200px; border:1px solid black;}
+.month {
+    background-color:black;
+    font:bold 12px verdana;
+    color:white;
+  }
+.daysofweek {
+    background-color:gray;
+    font:bold 12px verdana;
+    color:white;
+  }
+.days {
+    font-size: 12px;
+    font-family:verdana;
+    color:black;
+    background-color: lightyellow;
+    padding: 2px;
+  }
+.days #today{font-weight: bold; color: red;}
+
+        /* Tabliza Platno ------------- */
+
+#PlatnoHeder {
+	margin:0px;
+	padding-top: 5px;
+	width: 750px;
+	height: 25px;	
+	background: url('../Image/bg-blue_gradient.png') repeat-x bottom;
+  }
+#PlatnoBody {	
+	width: 750px;
+	background: url('../Image/sinPlatnoBody.gif') repeat-y;
+}
+#PlatnoGoogle {
+	margin:0 0 10px 0;
+	padding:0;
+	width: 470px;
+  }
+#PlatnoGranisi {
+	display:block;
+	padding:0 10px 0 10px;
+    font-size: 14px;
+  }
+
+#hederramkamalka {
+      text-align: center;
+      float: left; /*Stoinostine "left" ili "right" za pozisia na sledvashtia element varxu ekrana*/
+                   /*border-bottom: 1px solid #999e87; ako iskame dolna cherta*/
+  }
+#hederramkamalka ul {
+	font-size: 13px;
+	font-weight: bold;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	list-style:none;	
+  }    
+#hederramkamalka li {
+	display: inline;
+	background: url('../Image/geometria_red_sad.gif') no-repeat left top; 
+	text-align: center;
+	padding: 0;
+	margin-right: 4px;	
+	float: left;
+  }
+#hederramkamalka p {
+	color: #fffff6;
+	background: url('../Image/geometria_red_left.png') no-repeat left top;
+	float: left;
+	margin:	0;
+	padding-left:7px;
+	text-decoration: none;
+  }
+#hederramkamalka p span {
+	      background: url('../Image/geometria_red_sad.gif') no-repeat right top;
+	      display: block;
+	      width: 215px;
+	      padding:7px 2px 4px 0px;
+		  float: none;
+ }
+ 
+.ramkamalka {
+	border: 1px solid #c21700;
+    margin-bottom: 1em;
+    width: 222px;
+    font-size: 14px;
+    background: lightyellow;
+}
+ .ramkamalka .innerdiv {
+       background: url('../Image/brcorner_red.gif') no-repeat bottom right;
+       position: relative;
+       left: 2px;
+       top: 2px;
+       padding-left:5px; padding-right:4px; padding-top:1px; padding-bottom:15px;
+}
+
+#hederramkamalkar {
+      text-align: center;
+      float: left; /*Stoinostine "left" ili "right" za pozisia na sledvashtia element varxu ekrana*/
+                   /*border-bottom: 1px solid #999e87; ako iskame dolna cherta*/
+  }
+#hederramkamalkar ul {
+	font-size: 13px;
+	font-weight: bold;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	list-style:none;	
+  }    
+#hederramkamalkar li {
+	display: inline;
+	background: url('../Image/algebra_green_sad.gif') no-repeat left top; 
+	text-align: center;
+	padding: 0;
+	margin-right: 4px;	
+	float: left;
+  }
+#hederramkamalkar p {
+	color: #fffff6;
+	background: url('../Image/algebra_green_left.png') no-repeat left top;
+	float: left;
+	margin:	0;
+	padding-left:7px;
+	text-decoration: none;
+  }
+#hederramkamalkar p span {
+	      background: url('../Image/algebra_green_sad.gif') no-repeat right top;
+	      display: block;
+	      width: 215px;
+	      padding:7px 2px 4px 0px;
+		  float: none;
+ }
+ 
+.ramkamalkar {
+	border: 1px solid #007c1a;
+    margin-bottom: 1em;
+    width: 222px;
+    font-size: 14px;
+    background: #eaf0d3;
+}
+ .ramkamalkar .innerdiv {
+       background: url('../Image/brcorner_zelen.gif') no-repeat bottom right;
+       position: relative;
+       left: 2px;
+       top: 2px;
+       padding-left:5px; padding-right:4px; padding-top:1px; padding-bottom:15px;
+}
+
+#hederramkamalkas {
+      text-align: center;
+      float: left; /*Stoinostine "left" ili "right" za pozisia na sledvashtia element varxu ekrana*/
+                   /*border-bottom: 1px solid #999e87; ako iskame dolna cherta*/
+  }
+#hederramkamalkas ul {
+	font-size: 13px;
+	font-weight: bold;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	list-style:none;	
+  }    
+#hederramkamalkas li {
+	display: inline;
+	background: url('../Image/7klas_orange_sad.gif') no-repeat left top; 
+	text-align: center;
+	padding: 0;
+	margin-right: 4px;	
+	float: left;
+  }
+#hederramkamalkas p {
+	color: #fffff6;
+	background: url('../Image/7klas_orange_left.png') no-repeat left top;
+	float: left;
+	margin:	0;
+	padding-left:7px;
+	text-decoration: none;
+  }
+#hederramkamalkas p span {
+	      background: url('../Image/7klas_orange_sad.gif') no-repeat right top;
+	      display: block;
+	      width: 215px;
+	      padding:7px 2px 4px 0px;
+		  float: none;
+ }
+ 
+.ramkamalkas {
+	border: 1px solid #ea6a00;
+    margin-bottom: 1em;
+    width: 222px;
+    font-size: 14px;
+    background: lightyellow;
+}
+ .ramkamalkas .innerdivs {
+       background: url('../Image/brcorner_orange.gif') no-repeat bottom right;
+       position: relative;
+       left: 2px;
+       top: 2px;
+       padding-left:5px; padding-right:4px; padding-top:1px; padding-bottom:15px;
+}
+
+#hederramka {
+      text-align: center;
+      float: left; /*Stoinostine "left" ili "right" za pozisia na sledvashtia element varxu ekrana*/
+                   /*border-bottom: 1px solid #999e87; ako iskame dolna cherta*/
+  }
+#hederramka ul {
+	font-size: 13px;
+	font-weight: bold;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	list-style:none;	
+  }    
+#hederramka li {
+	display: inline;
+	background: url('../Image/bg.gif') repeat-x center top; 
+	text-align: center;
+	padding: 0;
+	margin-right: 4px;	
+	float: left;
+  }
+#hederramka p {
+	color: #d10cae;
+	background: url('../Image/leftcorner.gif') no-repeat left top;
+	float: left;
+	margin:	0;
+	padding-left:7px;
+	text-decoration: none;
+  }
+#hederramka p span {
+	      background: url('../Image/rightcorner.gif') no-repeat right top;
+	      display: block;
+	      width: 308px;
+	      padding:7px 2px 4px 0px;
+		  float: none;
+ }
+.ramka {
+	border: 1px solid #fac4e0;
+    margin-bottom: 1em;
+    width: 315px;
+    font-size: 14px;
+    background: lightyellow;
+}
+ .ramka .innerdiv {
+       background: url('../Image/brcorner.gif') no-repeat bottom right;
+       position: relative;
+       left: 2px;
+       top: 2px;
+       padding-left:5px; padding-right:4px; padding-top:1px; padding-bottom:15px;
+}
+
+#hederramkasada {
+      text-align: center;
+      float: left; /*Stoinostite "left" ili "right" za pozisia na sledvashtia element varxu ekrana*/
+                   /*border-bottom: 1px solid #999e87; ako iskame dolna cherta*/
+  }
+#hederramkasada ul {
+	font-size: 13px;
+	font-weight: bold;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	list-style:none;	
+  }    
+#hederramkasada li {
+	display: inline;
+	background: url('../Image/algebra_green_sad.gif') no-repeat left top; 
+	text-align: center;
+	padding: 0;
+	margin-right: 4px;	
+	float: left;
+  }
+#hederramkasada p {
+	color: #fffff6;
+	background: url('../Image/algebra_green_left.png') no-repeat left top;
+	float: left;
+	margin:	0;
+	padding-left:7px;
+	text-decoration: none;
+  }
+#hederramkasada p span {
+	      background: url('../Image/algebra_green_sad.gif') no-repeat right top;
+	      display: block;
+	      width: 320px;
+	      padding:7px 2px 4px 0px;
+		  float: none;
+ }
+
+.ramkasada {
+	border: 1px solid #007c1a;
+    margin-bottom: 1em;
+    width: 327px;
+    font-size: 14px;
+    background: #eaf0d3;
+}
+ .ramkasada .innerdivsada {
+       background: url('../Image/brcorner_zelen.gif') no-repeat bottom right;
+       position: relative;
+       left: 2px;
+       top: 2px;
+       padding-left:5px; padding-right:4px; padding-top:1px; padding-bottom:15px;
+}
+
+
+#hederramkasadg {
+      text-align: center;
+      float: left; /*Stoinostite "left" ili "right" za pozisia na sledvashtia element varxu ekrana*/
+                   /*border-bottom: 1px solid #999e87; ako iskame dolna cherta*/
+  }
+#hederramkasadg ul {
+	font-size: 13px;
+	font-weight: bold;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	list-style:none;	
+  }    
+#hederramkasadg li {
+	display: inline;
+	background: url('../Image/geometria_red_sad.gif') no-repeat left top; 
+	text-align: center;
+	padding: 0;
+	margin-right: 4px;	
+	float: left;
+  }
+#hederramkasadg p {
+	color: #fffff6;
+	background: url('../Image/geometria_red_left.png') no-repeat left top;
+	float: left;
+	margin:	0;
+	padding-left:7px;
+	text-decoration: none;
+  }
+#hederramkasadg p span {
+	      background: url('../Image/geometria_red_sad.gif') no-repeat right top;
+	      display: block;
+	      width: 320px;
+	      padding:7px 2px 4px 0px;
+		  float: none;
+ }
+
+.ramkasadg {
+	border: 1px solid #c21700;
+    margin-bottom: 1em;
+    width: 327px;
+    font-size: 14px;
+    background: lightyellow;
+}
+ .ramkasadg .innerdivsadg {
+       background: url('../Image/brcorner_red.gif') no-repeat bottom right;
+       position: relative;
+       left: 2px;
+       top: 2px;
+       padding-left:5px; padding-right:4px; padding-top:1px; padding-bottom:15px;
+}
+
+#hederramkasads {
+      text-align: center;
+      float: left; /*Stoinostite "left" ili "right" za pozisia na sledvashtia element varxu ekrana*/
+                   /*border-bottom: 1px solid #999e87; ako iskame dolna cherta*/
+  }
+#hederramkasads ul {
+	font-size: 13px;
+	font-weight: bold;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	list-style:none;	
+  }    
+#hederramkasads li {
+	display: inline;
+	background: url('../Image/7klas_orange_sad.gif') no-repeat left top; 
+	text-align: center;
+	padding: 0;
+	margin-right: 4px;	
+	float: left;
+  }
+#hederramkasads p {
+	color: #fffff6;
+	background: url('../Image/7klas_orange_left.gif') no-repeat left top;
+	float: left;
+	margin:	0;
+	padding-left:7px;
+	text-decoration: none;
+  }
+#hederramkasads p span {
+	      background: url('../Image/7klas_orange_sad.gif') no-repeat right top;
+	      display: block;
+	      width: 320px;
+	      padding:7px 2px 4px 0px;
+		  float: none;
+ }
+
+.ramkasads {
+	border: 1px solid #ea6a00;
+    margin-bottom: 1em;
+    width: 327px;
+    font-size: 14px;
+    background: lightyellow;
+}
+ .ramkasads .innerdivsads {
+       background: url('../Image/brcorner_orange.gif') no-repeat bottom right;
+       position: relative;
+       left: 2px;
+       top: 2px;
+       padding-left:5px; padding-right:4px; padding-top:1px; padding-bottom:15px;
+}
+
+#hederramkaunssa {
+      text-align: center;
+      float: left; /*Stoinostite "left" ili "right" za pozisia na sledvashtia element varxu ekrana*/
+                   /*border-bottom: 1px solid #999e87; ako iskame dolna cherta*/
+  }
+#hederramkaunssa ul {
+	font-size: 13px;
+	font-weight: bold;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	list-style:none;	
+  }    
+#hederramkaunssa li {
+	display: inline;
+	background: url('../Image/unss_fonblue.gif') no-repeat left top; 
+	text-align: center;
+	padding: 0;
+	margin-right: 4px;	
+	float: left;
+  }
+#hederramkaunssa p {
+	color: #fffff6;
+	background: url('../Image/unss_blue_left.gif') no-repeat left top;
+	float: left;
+	margin:	0;
+	padding-left:7px;
+	text-decoration: none;
+  }
+#hederramkaunssa p span {
+	      background: url('../Image/unss_fonblue.gif') no-repeat right top;
+	      display: block;
+	      width: 320px;
+	      padding:7px 2px 4px 0px;
+		  float: none;
+ }
+
+.ramkaunssa {
+	border: 1px solid #1260bf;
+    margin-bottom: 1em;
+    width: 327px;
+    font-size: 14px;
+    background: #eff3f3;
+}
+ .ramkaunssa .innerdivunssa {
+       background: url('../Image/bgcorner_blue.gif') no-repeat bottom right;
+       position: relative;
+       left: 2px;
+       top: 2px;
+       padding-left:5px; padding-right:4px; padding-top:1px; padding-bottom:15px;
+}
+
+#hederramkaunssg {
+      text-align: center;
+      float: left; /*Stoinostite "left" ili "right" za pozisia na sledvashtia element varxu ekrana*/
+                   /*border-bottom: 1px solid #999e87; ako iskame dolna cherta*/
+  }
+#hederramkaunssg ul {
+	font-size: 13px;
+	font-weight: bold;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	list-style:none;	
+  }    
+#hederramkaunssg li {
+	display: inline;
+	background: url('../Image/unss_fonpurple.gif') no-repeat left top; 
+	text-align: center;
+	padding: 0;
+	margin-right: 4px;	
+	float: left;
+  }
+#hederramkaunssg p {
+	color: #fffff6;
+	background: url('../Image/unss_purple_left.gif') no-repeat left top;
+	float: left;
+	margin:	0;
+	padding-left:7px;
+	text-decoration: none;
+  }
+#hederramkaunssg p span {
+	      background: url('../Image/unss_fonpurple.gif') no-repeat right top;
+	      display: block;
+	      width: 320px;
+	      padding:7px 2px 4px 0px;
+		  float: none;
+ }
+
+.ramkaunssg {
+	border: 1px solid #670091;
+    margin-bottom: 1em;
+    width: 327px;
+    font-size: 14px;
+    background: #f8f3ff;
+}
+ .ramkaunssg .innerdivunssg {
+       background: url('../Image/bgcorner_purple.gif') no-repeat bottom right;
+       position: relative;
+       left: 2px;
+       top: 2px;
+       padding-left:5px; padding-right:4px; padding-top:1px; padding-bottom:15px;
+}
+
+#PlatnoFooter {
+	margin: 0;
+	padding-top: 0;
+	background: url('../Image/sinPlatnoFooter.gif') no-repeat;
+  }
+.but {
+	width:40px;
+	height:15px;
+	padding-left:2px;
+	padding-right:2px;
+	background-color:#e0efff;
+	border-right:#4277bf 1px solid;
+	border-bottom:#4277bf 1px solid;
+	text-align:center;
+  }
+.tbut {
+	font-weight:bold;
+	color:#0063c9;
+	text-decoration:none;
+	text-align:center;
+}
+
+#mtext {
+	font-weight:bold;
+	color: #ff9c00;
+	text-decoration:none;
+	text-align:center;
+  }
+  
+
+.text_white  {
+	color: #ffffff;
+	font-size: 12px;
+	text-align:center;
+  }
+ 
+#textfacebook {font: 12px Arial;}
+  
+
+/*Tablica v dolna cast ot ekrana ---------*/
+
+
+#clear {clear: both;}
+.dolnaLenta1 {
+	margin: 15px 0px;
+	/*margin-bottom:10px;*/
+	padding:0;
+	border-bottom:1px solid #c3c7ca;
+  }
+.dolnaLenta2 {
+	margin: 0;
+	padding:0;
+	margin-top:1px;
+	border-top:3px solid #f6f6f6;
+  }
+.dolnaLenta2 ul {
+	margin: 0;
+	padding:0;
+	list-style-type: none;
+	text-align:center;
+  }
+.dolnaLenta2 ul li {
+	display: inline;
+	font-weight:bold;
+	font-size:10px;
+	color: #ff9c00;
+	border-right:#4daa77 1px solid;
+  }
+.dolnaLenta2 ul li a{color:#067c3c;}
+.dolnaLenta2 ul li a:hover {color: #ff9c00; text-decoration: underline;}
+
+
+.dolnaLenta3 {margin: 0; padding:0;}
+.dolnaLenta3 ul {
+	list-style-type: none;
+	margin: 0;
+	padding:0;
+  }
+.dolnaLenta3 ul li{display: block; margin-top:5px;}
+#text9 {font-size:8px;}
+#text14center {font-size:14px; text-align:center;}
+#text14right {font-size:14px; text-align:right; background-color: lightyellow}
+.teht12 {font-size: 12px; text-align:left;}
+.text14Bel {font-size:14px;}
+.textunssm {font-size:16px; /*padding-left:17px;*/}
+.center {text-align:center;}
+
+  
+        /* Krai Sadarganie ------------- */
+
+      /* Footer*/
+
+.footer {
+	margin:0;
+	width:1170px;
+	height:60px;
+	background:url('../Image/Footer.png');
+  }	  
+
+      /* Testove*/
+	  
+#cont {
+	width:500px;
+	background:url('../Image/bg_cont_quiz.png') repeat-y;
+  }
+
+#cont p {
+	width: 500px;
+	height: 13px;
+	margin-top: 0;
+	background: url('../Image/hd_cont_quiz.png') no-repeat;
+  }
+
+
+.font {
+	text-align:center;
+    font-size: 16px;
+    color: #ffff0f;
+  }
+
+.font1 {
+	text-align:center;
+    font-size: 15px;
+    color: #960583;
+  }
+  
+#cont .pn_begin {
+	width:475px;
+	height:4px;
+	margin-left:10px;
+	background:url('../Image/pn_begin.png') no-repeat;
+  }
+
+#cont .pn_end {
+	width: 475px;
+	margin-left: 10px;
+	background: url('../Image/pn_end.png') no-repeat; 
+	
+  }
+
+#cont .end {
+	height: 13px;
+	font-size: 1px;
+	margin-top: 0px;
+	background: url('../Image/en_cont_quiz.png') no-repeat;
+  }
+
+.pn_begin, .pn_end {
+	
+	background-repeat: no-repeat;
+	background-position: top;
+	height: 4px;
+	font-size: 1px;
+  }
+.pn_end {
+	background-position: bottom;
+	margin-bottom: 10px;
+  }
+
+#cont .panel {
+	width: 475px;
+	padding: 0px;
+	background: url('../Image/pn_bg.png') repeat-y;
+	margin-left: 10px;
+	margin-bottom: 0px;
+  }
+  
+ol.quiz {           
+	margin-top: 0px;
+	margin-bottom: 0px;
+
+	font-size: 12pt;
+	color: Black;
+  }
+
+ol.quiz ul {
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-style:italic;
+	font-weight:normal;
+	font-size:14pt;
+	list-style:none;
+	margin-bottom:10px;
+  }
+
+.code {
+	border: 1px solid #e0e0e0;
+	background: #e0e0e3;
+	width: 390px;
+	font-family: courier new;
+	font-size: 11px;
+	display: block;
+	padding: 10px;
+	margin: 5px;
+  }
+
+.separator {
+	width: 420px;
+	height: 1px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	font-size: 1px;
+	background: url('../Image/sp_normal.png') repeat-x;
+}
+
+.separatormax {
+	width: 670px;
+	height: 1px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	font-size: 1px;
+	background: url('../Image/sp_normal.png') repeat-x;
+}
+  
+#add {
+	
+	width: 160px;
+	position: relative;	
+	background: url('../Image/bg_add_quiz.png') repeat-y;
+}  
+  
+#add p {
+	display: block;
+	margin: 0px;
+	width: 160px;
+	height: 13px;
+	background: url('../Image/hd_add_quiz.png') no-repeat;
+}  
+  
+.addTab {
+    margin: 0px;
+    padding-right: 5px;
+	width:150px;
+}
+  
+#add .pn_begin {
+	width: 140px;
+	margin-left: 10px;
+	background: url('../Image/pnr_begin.png') no-repeat; 
+}
+
+
+#add .pn_end {
+	width: 140px;
+	margin-left: 10px;
+	background: url('../Image/pnr_end.png') no-repeat;
+}
+
+#add .end {
+	height: 10px;
+	margin-top: 0px;
+	font-size: 1px;
+	background: url('../Image/en_add_quiz.png') no-repeat;
+}
+
+#add .panel {
+	width: 140px;
+	margin-left: 10px;
+	background: url('../Image/pnr_bg.png') repeat-y;
+}  
+  
+.panel span {
+	padding-top: 5px;
+	padding-left: 5px;
+	color: #D00F0F;
+	font-size: 80%;
+	font-weight: normal;
+	letter-spacing: 5pt;
+	background: url('../Image/pn_underline.png') no-repeat left bottom;
+	
+} 
+
+.panel ul {
+   padding-left: 6px;
+   padding-top: 6px;
+   margin: 0px;
+   font: bold 10px default; /*cheren text s size 10px*/
+   list-style-type: none; /*ne izpisva nomeriran spisak*/
+}
+
+      /* Samopodgotovka*/
+
+#sammenu {font-size:10px;}
+.samnavigator {width: 720px; font-size:10px; text-align:right;}
+.separatorsam {
+	width: 700px;
+	height: 1px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	font-size: 1px;
+	background: url('../Image/sp_normal.png') repeat-x;
+}
+.codesam {
+	border: 1px solid #e0e0e0;
+	background: #e0e0e3;
+	width: 650px;
+	font-family: courier new;
+	font-size: 11px;
+	display: block;
+	padding: 10px;
+	margin: 5px;
+  }  
+  
+.codesammin {
+	border: 1px solid #e0e0e0;
+	background: #e0e0e3;
+	width: 610px;
+	font-family: courier new;
+	font-size: 11px;
+	display: block;
+	padding: 10px;
+	margin: 5px;
+  }
+  
+.codesamV {
+	border: 1px solid #e0e0e0;
+	background: #ffffff;
+	width: 600px;
+	font-family: courier new;
+	font-size: 12px;
+	display: block;
+	padding: 0px;
+	margin: 0px;
+  }
+
+.codesammin2 {
+	border: 1px solid #e0e0e0;
+	background: #e0e0e3;
+	width: 570px;
+	font-size: 11px;
+	display: block;
+	padding: 10px;
+	margin: 5px;
+  }
+  
+.codesamV2 {
+	border: 1px solid #e0e0e0;
+	background: #ffffff;
+	width: 560px;
+	font-family: courier new;
+	font-size: 12px;
+	display: block;
+	padding: 0px;
+	margin: 0px;
+  }
+  
+.codesamV2tu {
+	border: 1px solid #e0e0e0;
+	background: #ffffff;
+	width: 560px;
+	display: block;
+}
+  
+ .codesamText {
+	border: 1px solid #e0e0e0;
+	background: #ffffff;
+	width: 385px;
+	font-size: 12px;
+	display: block;
+	padding: 0px;
+	margin: 0px;
+  }
+  
+ .codeOzad {
+	border: 1px solid #e0e0e0;
+	background: #e0e0e3;
+	width: 495px;
+	font-family: courier new;
+	font-size: 11px;
+	display: block;
+	padding: 10px;
+	margin: 5px;
+  }
+  
+ .codesamOzad {
+	border: 1px solid #e0e0e0;
+	background: #ffffff;
+	width: 490px;
+	font-family: courier new;
+	font-size: 12px;
+	display: block;
+	padding: 0px;
+	margin: 0px;
+  }
+  
+ #algebra {
+	margin: 0;
+	padding: 1px;
+	background: url('../Image/algebra_green.gif') no-repeat;
+  }
+
+ #algebramalka {
+	margin: 0;
+	padding: 0;
+	background: url('../Image/algebra_green.html') no-repeat;
+  }
+ 
+ #geometria {
+	margin: 0;
+	padding: 1px;
+	background: url('../Image/geometria_red.gif') no-repeat;
+  }
+  
+  #geometriamalka {
+	margin: 0;
+	padding: 0;
+	background: url('../Image/geometria_red.png') no-repeat;
+  }
+
+ #klas7 {
+	margin: 0;
+	padding: 0;
+	background: url('../Image/7klas_orange.png') no-repeat;
+  }
+  
+  #klas71 {
+	margin: 0;
+	padding: 2px;
+	background: url('../Image/7klas_orange.gif') no-repeat;
+  } 
+
+ .samtext_white  {
+	color: #ffffff;
+	font-size: 14px;
+	text-align: left;
+  }
+
+ .buttonwrapper{ /* Container you can use to surround a CSS button to clear float */
+    overflow: hidden; /*See: http://www.quirksmode.org/css/clearing.html */
+    width: 100%;
+	width: 455px;
+	margin-left: 20px;
+	font-size: 14px;
+}
+
+ a.hoverbutton{
+	display: block;
+	line-height: 25px; /* This value + 4px + 4px (top and bottom padding of SPAN) must equal height of button background (default is 33px) */
+	width: 450px;
+	height: 33px; /* Height of button background height */
+	padding-left: 0px; /* Width of left menu image */
+	margin-top: 15px;
+	text-decoration: none;
+}
+
+ a:link.hoverbutton, a:visited.hoverbutton, a:active.hoverbutton{color: #fffff6; /*button text color*/}
+
+ a.hoverbutton span {
+	display: block;
+    padding: 4px 0px 4px 9px; /*Set 9px below to match value of 'padding-left' value above*/
+}
+
+ a.hoverbutton:hover{ /* Hover state CSS */ background-position: bottom left;}
+
+ a.hoverbutton:hover span { /* Hover state CSS */ background-position: bottom right;}
+
+ a.green span{background: transparent url('../Image/green_black.gif') no-repeat top right;}
+
+ a.green:hover span {color:#007c1a;}
+
+ a.red span{background: transparent url('../Image/red_black.gif') no-repeat top right;}
+
+ a.red:hover span {color:#c21700;}
+
+ a.blue span{background: transparent url('../Image/blue_black.gif') no-repeat top right;}
+
+ a.blue:hover span {color:#4d90e1;}
+ 
+ a.orange span{background: transparent url('../Image/orange_black.gif') no-repeat top right;}
+
+ a.orange:hover span {color:#ea6a00;}
+ 
+ .arrow_karta {margin: 10px 0px 0px 20px;}
+ 
+ .hederProgKM {
+	margin:20px 0px 10px 0px;
+	padding: 4px 0px 0px 30px;
+	font-size: 14px;
+	width:700px;
+	height:25px;
+	color: #F00;
+	background:url('../Image/hederProgKM.gif') no-repeat;
+  }
+  
+/*Nachalo xorizontalno menu_podmenu star ----*/  
+  ul#navlist { 
+    height:25px;
+	padding: 0;
+    margin: 0;
+	margin-left:10px;
+    list-style-type: none; /*Premaxva buletite v spisaka*/
+	font-size: 10px;
+	
+  }
+  
+  ul#navlist li {display: inline; /*Podrezhda spisaka na edin red*/ }
+ 
+  ul#navlist li a {
+   float: left;
+   width: 8em;
+   background-color:#369;
+   border-right:#e0efff 1px solid;
+   padding: 0 5px 4px;
+   font-weight:bold;
+   color:#ffff80;
+   text-decoration:none;
+}
+
+ul#navlist li a:hover { 
+   background-color:#e0efff; 
+   color: #ff9c00;
+   border-right:#4277bf 1px solid;
+   border-bottom:#4277bf 1px solid;
+   text-decoration: underline;
+}
+
+.pre {clear:left;}
+
+/*End xorizontalno menu_podmenu star ----*/
+
+/*Nachalo xorizontalno menu_podmenu nov ----*/  
+
+.jqueryslidemenu{
+	font: bold 12px Verdana;
+	width: 100%;
+}
+
+.jqueryslidemenu ul{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+/*Top level list items*/
+.jqueryslidemenu ul li{
+	position: relative;
+	display: inline;
+	float: left;
+}
+
+/*Top level menu link items style*/
+.jqueryslidemenu ul li a{
+	display: block;
+	background: #242c54 url('../Image/bluedefault.gif'); /*background of tabs (default state)*/
+	padding: 8px 10px;
+	border-right: 1px solid #778;
+	text-decoration: none;
+}
+
+* html .jqueryslidemenu ul li a{ /*IE6 hack to get sub menu links to behave correctly*/display: inline-block;}
+
+.jqueryslidemenu ul li a:link, .jqueryslidemenu ul li a:visited{color: #ffff80;}
+
+.jqueryslidemenu ul li a:hover{
+	background: transparent url('../Image/blueactive.gif') center center repeat-x; /*tab link background during hover state*/
+    color: white;
+}
+	
+/*1st sub level menu*/
+.jqueryslidemenu ul li ul{
+	position: absolute;
+	left: 0;
+	display: block;
+	visibility: hidden;
+}
+
+/*Sub level menu list items (undo style from Top level List Items)*/
+.jqueryslidemenu ul li ul li{
+	display: list-item;
+	float: none;
+}
+
+/*All subsequent sub menu levels vertical offset after 1st level sub menu */
+.jqueryslidemenu ul li ul li ul{top: 0;}
+
+/* Sub level menu links style */
+.jqueryslidemenu ul li ul li a{
+	font: normal 13px Verdana;
+	width: 170px; /*width of sub menus*/
+	padding: 5px;
+	margin: 0;
+	border-top-width: 0;
+	border-bottom: 1px solid gray;
+}
+
+/* ######### CSS classes applied to down and right arrow images  ######### */
+
+.downarrowclass{
+	position: absolute;
+	top: 12px;
+	right: 7px;
+}
+
+.rightarrowclass{
+	position: absolute;
+	top: 6px;
+	right: 5px;
+}
+
+
+
+/*End xorizontalno menu_podmenu nov ----*/
+
+.margin20 {margin-left: 20px;}
+#mytable div { 
+	width: 60px; 
+	line-height:30px; 
+	border: 1px solid red; 
+	text-align: center; 
+	margin-bottom: 1px;
+	float: left;
+}
+
+#mytable br {clear: both;}
+
+#mytablecolor {background: #e0e0e0;}
