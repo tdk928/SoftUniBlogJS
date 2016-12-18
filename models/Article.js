@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'); // деклариране ,че ще използвам библиотека mongoose
 
-
+// променлива articleSchema която съдържа различни пропъртита за Article и съответния тип в който ги искаме да ни се подадът
 let articleSchema = mongoose.Schema({
     title: {type: String, required: true},
     content: {type: String, required: true},

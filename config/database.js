@@ -14,6 +14,8 @@ module.exports = (config) => {
         console.log('MongoDB ready!')
     });
 
+
+    //заявяваме , че ще използваме долу описаните файлове и директорията им
     require('./../models/Role').initialize();
     require('./../models/User').seedAdmin();
     require('./../models/Article');

@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const encryption = require('./../utilities/encryption');
 const Role = require('mongoose').model('Role');
 
-
+// променлива userleSchema която съдържа различни пропъртита за User-a и съответния тип в който ги искаме да ни се подадът
 let userSchema = mongoose.Schema(
     {
         email: {type: String, required: true, unique: true},
