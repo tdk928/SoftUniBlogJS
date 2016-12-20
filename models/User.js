@@ -15,7 +15,10 @@ let userSchema = mongoose.Schema(
 );
 
 userSchema.method ({
+
+    //автентикираща функция която приема парола
    authenticate: function (password) {
+       //използваме encryption,hashPassword -> подаваме паролата , използваме солта
        let inputPasswordHash = encryption.hashPassword(password, this.salt);
        let isSamePasswordHash = inputPasswordHash === this.passwordHash;
 
@@ -30,10 +33,12 @@ userSchema.method ({
         return isAuthor;
     },
     isInRole: function (roleName) {
+        //намери ми такава роля чието име е равно на roleName и после ми го върни и ми кажи роля
         return Role.findOne({name: roleName}).then(role => {
             if (!role) {
                 return false;
             }
+            //this roles(ролята с която съм влязал в момента)
             let isInRole = this.roles.indexOf(role.id) !== -1;
             return isInRole;
         })
@@ -55,12 +60,15 @@ userSchema.method ({
     },
 });
 
+//създаваме модел User който използва пропъртитата на userSchema
 const User = mongoose.model('User', userSchema);
-
+//правим User глобално
 module.exports = User;
 
 module.exports.seedAdmin = () => {
     let email = 'admin@softuni.bg';
+
+    //търся в базата има ли такъв User и ако има неправя нищо ако няма ->
     User.findOne({email: email}).then(admin => {
         if(!admin) {
             Role.findOne({name: 'Admin'}).then(role => {

@@ -3,7 +3,7 @@
 
         <form class="form-horizontal" method="POST" action="/article/create" encType="multipart/form-data">
             <fieldset>
-                <legend>New Article</legend>
+                <legend>Нова статия</legend>
                 <div class="form-group"><label class="col-sm-4 control-label" for="articleTitle">Заглавие на
                     Темата</label>
                     <div class="col-sm-4 "><input type="text" class="form-control" id="articleTitle"
@@ -26,7 +26,7 @@
                         <option value="{{this.id}}">{{this.name}}</option> {{/each}} </select></div>
                 </div>
 
-                <div class="form-group"><label class="col-sm-4 control-label" for="file">File </label>
+                <div class="form-group"><label class="col-sm-4 control-label" for="file">Файл</label>
                     <div class="col-sm-6">
                         <input type="file" name="file"/>
                     </div>
@@ -35,8 +35,8 @@
 
                 <div class="form-group">
                     <div class="col-sm-4 col-sm-offset-4">
-                        <button type="reset" class="btn btn-default">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="reset" class="btn btn-default">Отказ</button>
+                        <button type="submit" class="btn btn-primary">Потвърди</button>
                     </div>
                 </div>
             </fieldset>

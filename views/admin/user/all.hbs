@@ -4,10 +4,10 @@
             <table class="table table-striped table-hover ">
                 <thead>
                 <tr>
-                    <th>#</th>
-                    <th>Full Name</th>
-                    <th>Email</th>
-                    <th>Actions</th>
+                    <th>#ID на потребителите</th>
+                    <th>Име</th>
+                    <th>Имейл</th>
+                    <th>Действия</th>
                 </tr>
                 </thead>
                 <tbody> {{#each users}}
@@ -15,7 +15,7 @@
                         <td>{{ this.id }}</td>
                         <td>{{ this.fullName }}</td>
                         <td>{{ this.email }}</td>
-                        <td><a href="/admin/user/edit/{{this.id}}">Edit</a> <a href="/admin/user/delete/{{this.id}}">Delete</a>
+                        <td><a href="/admin/user/edit/{{this.id}}">Редактирай</a> <a href="/admin/user/delete/{{this.id}}">Изтрии</a>
                         </td>
                     </tr> {{/each}} </tbody>
             </table>

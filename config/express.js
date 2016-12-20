@@ -38,6 +38,7 @@ module.exports = (app, config) => {
     // This makes the content in the "public" folder accessible for every user.
     app.use(express.static(path.join(config.rootFolder, 'public')));
 
+    //middleware -> минава през req,res И ако в req има User запамети този user в res.locals.user
     app.use((req, res, next) => {
         if(req.user) {
             res.locals.user = req.user;

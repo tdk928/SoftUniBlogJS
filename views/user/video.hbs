@@ -1,0 +1,47 @@
+<div class="container body-content">
+    <form class="form-horizontal" method="POST" action="/user/video/" encType="multipart/form-data">
+
+        <div class="form-group">
+            <div class="col-sm-12">
+                <label for="title">Име на видеото</label>
+                <input type="text" id="title" name="title" class="form-control"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-12">
+                <label class="control-label" for="file">Файл</label>
+                <input type="file" name="file" id="file" class="inputfile" data-multiple-caption="{count} files selected" multiple />
+                <button type="reset" class="btn btn-default">Отказ</button>
+                <button type="submit" class="btn btn-primary">Потвърди</button>
+            </div>
+        </div>
+
+
+
+    </form>
+
+
+    </br>
+    <hr>
+
+
+    {{#each videos}}
+        <div class="row">
+            <div class="col-md-6">
+                <header><h2><a href="/uploadVideos/{{ this.videoPath }}"> </a></h2>
+                    <video width="600" controls>
+                        <source src="{{this.videoPath}}" type="video/mp4">
+                    </video>
+                </header>
+            </div>
+        </div>
+        <hr>
+    {{/each}}
+</div>
+
+
+
+
+
+

@@ -8,7 +8,8 @@ let articleSchema = mongoose.Schema({
     category: {type: mongoose.Schema.Types.ObjectId, required: true, ref: 'Category'},
     tags: [{type: mongoose.Schema.Types.ObjectId, required: true, ref: 'Tag'}],
     date: {type: Date, default: Date.now()},
-    imagePath: {type: String}
+    imagePath: {type: String, default: '/uploadFiles/default.png'},
+    comments: [{type: mongoose.Schema.Types.ObjectId, ref:'Comment'}]
 });
 
 
@@ -71,6 +72,6 @@ articleSchema.method({
     }
 });
 
-const  Article = mongoose.model('Article', articleSchema);
+const Article = mongoose.model('Article', articleSchema);
 module.export = Article;
 

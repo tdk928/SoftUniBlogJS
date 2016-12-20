@@ -6,6 +6,10 @@ const tagController = require('./../controllers/tag');
 
 
 module.exports = (app) => {
+
+    app.get('/user/video',articleController.videoGet);
+    app.post('/user/video',articleController.videoPost);
+
     app.get('/', homeController.index);
     app.get('/user/forum', homeController.forumGet);
 
@@ -22,6 +26,7 @@ module.exports = (app) => {
     app.get('/article/details/:id', articleController.details);
     app.get('/article/edit/:id', articleController.editGet);
     app.post('/article/edit/:id', articleController.editPost);
+    app.post('/article/postComment/:id', articleController.postComment);
 
     app.get('/article/delete/:id', articleController.deleteGet);
     app.post('/article/delete/:id', articleController.deletePost);

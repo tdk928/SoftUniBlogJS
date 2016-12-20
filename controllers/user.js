@@ -4,21 +4,27 @@ const encryption = require('./../utilities/encryption');
 
 
 module.exports = {
+    //рендерирай(нарисувай) ми това views/...........
     registerGet: (req, res) => {
         res.render('user/register');
     },
 
+
     registerPost:(req, res) => {
+        //вземаме всички пропъртита .password , .email ....
         let registerArgs = req.body;
 
+        //намери ми 1 User чиито Емайл да отговаря на  Емайл-а който ми е подаден и ми върни User
         User.findOne({email: registerArgs.email}).then(user => {
             let errorMsg = '';
+            //ако въведения емайл го имаме
             if (user) {
-                errorMsg = 'User with the same username exists!';
+                errorMsg = 'User with the same email exists!';
             } else if (registerArgs.password !== registerArgs.repeatedPassword) {
                 errorMsg = 'Passwords do not match!'
             }
 
+            // ако има error зареди ми на ново 'user/register' за да се регистрирам но ми запазва полетата в който нямам грешка
             if (errorMsg) {
                 registerArgs.error = errorMsg;
                 res.render('user/register', registerArgs)
@@ -26,17 +32,21 @@ module.exports = {
                 let salt = encryption.generateSalt();
                 let passwordHash = encryption.hashPassword(registerArgs.password, salt);
 
+                //създавам обект със следните пропъртита
                 let userObject = {
                     email: registerArgs.email,
+                    // passwordHash -> взели сме въведената парола и сме я кодирали с солта която описахме
                     passwordHash: passwordHash,
                     fullName: registerArgs.fullName,
                     salt: salt
                 };
                 let roles = [];
+                //когато си регистрираме потребител тои получава роля User  и някакво ID
                 Role.findOne({name: 'User'}).then(role => {
                     roles.push(role.id);
 
                     userObject.roles = roles;
+
                     User.create(userObject).then(user => {
                         user.prepareInsert();
                         req.logIn(user, (err) => {
@@ -51,6 +61,7 @@ module.exports = {
                         });
 
 
+                //за да създам обект в базата му трябва -> Model(име).create(обекта)
                 User.create(userObject).then(user => {
                     req.logIn(user, (err) => {
                         if (err) {
@@ -75,6 +86,8 @@ module.exports = {
 
     loginPost: (req, res) => {
         let loginArgs = req.body;
+
+        //отново използвам функционалностите на req.body , проверявам дали подадения емайл отговаря на условията за емайл
         User.findOne({email: loginArgs.email}).then(user => {
             if (!user ||!user.authenticate(loginArgs.password)) {
                 let errorMsg = 'Either username or password is invalid!';

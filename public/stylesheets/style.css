@@ -19,9 +19,8 @@
 body {
     padding-top: 70px;
     padding-bottom: 20px;
-  background-image: url(../math22.jpg);
-  background-size:100%;
-  background-repeat: no-repeat;
+    background-size:100%;
+    background-repeat: no-repeat;
 
 }
 
@@ -5983,7 +5982,7 @@ button.close {
   padding: 20px;
 }
 .modal-footer {
-  padding: 20px;
+  padding: 10px;
   text-align: right;
 }
 .modal-footer .btn + .btn {
@@ -7070,10 +7069,21 @@ article .author  {
 }
 
 .jj {
-
   position: absolute;
-  left:0px;
+  bottom: 0px;
+  right: 10px;
+  height: 35px;
+  margin: 0px 0px 0px 0px;
+  text-align: right;
+  padding: 50px 30px;
+}
 
-  height:30px;
-  width:100%;
+.dphoto {
+  text-align: center;
+}
+
+.video {
+  margin-left: auto;
+  margin-right: auto;
+  display: block
 }

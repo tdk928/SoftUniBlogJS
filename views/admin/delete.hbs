@@ -2,26 +2,26 @@
     <div class="well">
         <form class="form-horizontal" action="/admin/user/delete/{{userToDelete.id}}" method="post">
             <fieldset>
-                <legend>Delete User - {{ userToDelete.fullName }}</legend>
-                <div class="form-group"><label class="col-sm-4 control-label" for="email">Email</label>
+                <legend>Изтрии потребител- {{ userToDelete.fullName }}</legend>
+                <div class="form-group"><label class="col-sm-4 control-label" for="email">Имейл</label>
                     <div class="col-sm-4 "><input class="form-control" id="email" value="{{ userToDelete.email }}"
                                                   name="email" required type="text" disabled></div>
                 </div>
-                <div class="form-group"><label class="col-sm-4 control-label" for="fullName">Full Name</label>
+                <div class="form-group"><label class="col-sm-4 control-label" for="fullName">Име</label>
                     <div class="col-sm-4 "><input type="text" class="form-control" id="fullName"
                                                   value="{{ userToDelete.fullName }}" name="fullName" disabled></div>
                 </div>
 
 
-                <div class="form-group"><label class="col-sm-4 control-label" for="articleContent">Category</label>
+                <div class="form-group"><label class="col-sm-4 control-label" for="articleContent">Категория</label>
                     <div class="col-sm-6"><select name="category" class="form-control" id="select" disabled>
                         <option value="{{category.id}}">{{category.name}}</option>
                     </select></div>
                 </div>
 
                 <div class="form-group">
-                    <div class="col-sm-4 col-sm-offset-4"><a class="btn btn-default" href="/admin/user">Cancel</a>
-                        <button type="submit" class="btn btn-danger">Delete</button>
+                    <div class="col-sm-4 col-sm-offset-4"><a class="btn btn-default" href="/admin/user">Отказ</a>
+                        <button type="submit" class="btn btn-danger">Изтрии</button>
                     </div>
                 </div>
             </fieldset>

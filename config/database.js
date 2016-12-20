@@ -4,6 +4,7 @@ mongoose.Promise = global.Promise;
 module.exports = (config) => {
     mongoose.connect(config.connectionString);
 
+    //подай ми сегашната конекция и я приеми в database
     let database = mongoose.connection;
     database.once('open', (error) => {
         if (error) {
@@ -21,6 +22,8 @@ module.exports = (config) => {
     require('./../models/Article');
     require('./../models/Category');
     require('./../models/Tag');
+    require('./../models/Video');
+    require('./../models/Comment');
 
 };
 

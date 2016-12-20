@@ -15,11 +15,12 @@
                     {{ this.author.fullName }}
                 </small>
 
-                <img src="{{this.imagePath}}" height="100" width="100">
+                <div class="dphoto">
+                <img src="{{this.imagePath}}" height="150" width="300">
+                </div>
 
                 <footer>
-                    <div class="pull-right"><a class="btn btn-default btn-xs" href="/article/details/{{this.id}}">Read
-                        more &raquo;</a></div>
+                    <div class="pull-right"><a class="btn btn-default btn-xs" href="/article/details/{{this.id}}">Още &raquo;</a></div>
                 </footer>
             </article>
         </div> {{/each}} </div>

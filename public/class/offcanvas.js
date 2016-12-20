@@ -1,5 +1,5 @@
 
-function kajimikvosumizbral(nomernaelementa){
+function kajimikvosumizbral(nomeraelementa){
     var otgovor = $('input[name=Q'+nomernaelementa+'Choice]').val();
     var actotgovor = $('input#'+otgovor).text();
     console.log('user-a e natisnal otg.'+otgovor);
@@ -15,12 +15,12 @@ function opc(a, b) {
     opcno(a, b), obj && (obj.style.display = "none" == obj.style.display ? "" : "none")
 }
 
-function opc1(m, M, b) { // vika se vseki put kato izberesh otgovor
-    var d = eval("document.Q1Form.Q" + m + "Choice"),
+function opc1(questionNumber, answerPossibilities, correctAnswer) { // vika se vseki put kato izberesh otgovor
+    var d = eval("document.Q1Form.Q" + questionNumber + "Choice"),
         v = 0;
-    for (i = 0; i < 3; i++) opcno(m, v), "" == obj.style.display && (obj.style.display = "none"), v = i + 1;
-    for (v = 0, i = 0; i < M; i++) 1 == d[i].checked && (v = i + 1);
-    v == b ? v = 2 : v > 0 && (v = 1), opc(m, v)
+    for (i = 0; i < 3; i++) opcno(questionNumber, v), "" == obj.style.display && (obj.style.display = "none"), v = i + 1;
+    for (v = 0, i = 0; i < answerPossibilities; i++) 1 == d[i].checked && (v = i + 1);
+    v == correctAnswer ? v = 2 : v > 0 && (v = 1), opc(questionNumber, v)
 }
 $(document).ready(function() {
     $('[data-toggle="offcanvas"]').click(function() {

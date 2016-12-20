@@ -3,6 +3,8 @@ const Category = require('mongoose').model('Category');
 const initializeTags = require('./../models/Tag').initializeTags;
 const express = require('express');
 const fileUpload = require('express-fileupload');
+const Video = require('mongoose').model('Video');
+const Comment = require('mongoose').model('Comment');
 
 module.exports = {
     createGet: (req, res) => {
@@ -30,26 +32,17 @@ module.exports = {
         articleArgs.author = req.user.id;
         articleArgs.tags = [];
 
-        // upload code
-
-
         let file;
 
-        if (!req.files) {
-            res.send('No files were uploaded.');
-            return;
-        }
-
         file = req.files.file;
-        file.mv(`./public/uploadFiles/${file.name}`, function (err) {
-            if (err) {
-                res.status(500).send(err);
-                return;
-            }
-        });
 
-        articleArgs.imagePath = `/uploadFiles/${file.name}`;
+        if (file && file.data.length) {
+            file.mv(`./public/uploadFiles/${file.name}`, function (err) {
 
+            });
+
+            articleArgs.imagePath = `/uploadFiles/${file.name}`;
+        }
 
         Article.create(articleArgs).then(article => {
             let tagNames = articleArgs.tagNames.split(/\s+|,/).filter(tag => {
@@ -57,7 +50,7 @@ module.exports = {
             });
             initializeTags(tagNames, article.id);
             article.prepareInsert();
-            res.redirect('/');
+            res.redirect('/user/forum');
         });
 
 
@@ -65,7 +58,7 @@ module.exports = {
     details: (req, res) => {
         let id = req.params.id;
 
-        Article.findById(id).populate('author tags').then(article => {
+        Article.findById(id).populate('author tags comments').then(article => {
             if (!req.user) {
                 res.render('article/details', {article: article, isUserAuthorized: false});
                 return;
@@ -81,7 +74,7 @@ module.exports = {
     editGet: (req, res) => {
         let id = req.params.id;
 
-
+        //ако не сме логнати -> след като се логнем се връщаме на URL където сме били
         if (!req.isAuthenticated()) {
             let returnUrl = `/article/edit/${id}`;
             req.session.returnUrl = returnUrl;
@@ -157,6 +150,7 @@ module.exports = {
         }
     },
     deleteGet: (req, res) => {
+        //user-a го е подал  в URL и го вземам от там
         let id = req.params.id;
         if (!req.isAuthenticated()) {
             let returnUrl = `/article/delete/${id}`;
@@ -166,6 +160,7 @@ module.exports = {
             return;
         }
 
+        //намери ми това ИД което си взел от URL , и ми върни неговите тагове/артикали
         Article.findById(id).populate('category tags').then(article => {
             req.user.isInRole('Admin').then(isAdmin => {
                 if (!isAdmin && !req.user.isAuthor(article)) {
@@ -181,12 +176,64 @@ module.exports = {
     },
     deletePost: (req, res) => {
         let id = req.params.id;
+
+        //намери ми по ИД което сме взели от URL/базата, върни ми го и след като свършиш с задачите(populate -> вземи ми инфо за автора) го изтрии
         Article.findOneAndRemove({_id: id}).populate('author').then(article => {
             article.prepareDelete();
-            res.redirect('/');
+            res.redirect('/user/forum');
+        });
+    },
+    postComment: (req, res) => {
+        let articleId = req.params.id;
+
+        let commentArgs = req.body;
+
+        if (commentArgs) {
+            let article = Article.findById(articleId).then(article => {
+                if (!req.user) {
+                    res.redirect('/user/login');
+                }
+
+                commentArgs.article = article.id;
+                commentArgs.author = req.user.id;
+
+                Comment.create(commentArgs).then(comment => {
+                    article.comments.push(comment.id);
+                    article.save();
+
+                    res.redirect(`/article/details/${articleId}`)
+                }).catch(err => {
+                    console.log(err)
+                });
+            }).catch(err => {
+                console.log(err)
+            });
+        }
+    },
+
+    videoGet: (req, res) => {
+        Video.find().then(videos => {
+            res.render('user/video', {videos: videos});
         });
     },
 
+    videoPost: (req, res) => {
+
+        let file;
+        let articleArgs = req.body;
+
+        file = req.files.file;
+
+        if (file && file.data.length) {
+            file.mv(`./public/uploadVideos/${file.name}`, function (err) {
+            });
+
+            articleArgs.videoPath = `/uploadVideos/${file.name}`;
+            Video.create(articleArgs).then(()=> {
+                res.redirect('/user/video');
+            });
+        }
+    }
 
 };
 

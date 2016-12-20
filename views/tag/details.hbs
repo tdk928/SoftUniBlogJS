@@ -1,4 +1,4 @@
-<div class="container body-content"><h1>Searching by tag - {{ tag.name }}</h1>
+<div class="container body-content"><h1>Търсене по таг - {{ tag.name }}</h1>
     <div class="row"> {{#each articles}}
         <div class="col-md-6">
             <article>
@@ -8,8 +8,7 @@
                     <a class="btn btn-default btn-xs" href="/tag/{{this.name}}">{{ this.name }}</a> {{/each}}</p>
                 <small class="author"> {{ article.author.fullName }} </small>
                 <footer>
-                    <div class="pull-right"><a class="btn btn-default btn-xs" href="/article/details/{{this.id}}">Read
-                        more &raquo;</a></div>
+                    <div class="pull-right"><a class="btn btn-default btn-xs" href="/article/details/{{this.id}}">Още&raquo;</a></div>
                 </footer>
             </article>
         </div> {{/ each}} </div>

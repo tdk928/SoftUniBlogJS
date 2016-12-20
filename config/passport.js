@@ -2,6 +2,10 @@ const passport = require('passport');
 const LocalPassport = require('passport-local');
 const User = require('./../models/User');
 
+
+
+
+//автентикацията приема няколко стойности
 const authenticateUser = (username, password, done) => {
     User.findOne({email: username}).then(user => {
         if(!user){
@@ -17,6 +21,7 @@ const authenticateUser = (username, password, done) => {
 };
 
 module.exports = () => {
+    //LocalPassport е стратегия , usernameField,passwordField имат връзка с HTML
   passport.use(new LocalPassport({
       usernameField: 'email',
       passwordField: 'password'
@@ -27,6 +32,7 @@ module.exports = () => {
           return done(null, false);
       }
 
+      //ако всичко е ок user-a получава уникално ИД
       return done(null, user.id);
   });
 
