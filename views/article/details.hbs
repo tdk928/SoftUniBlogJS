@@ -11,6 +11,10 @@
                     {{article.author.fullName}}
                 </small>
 
+                <!--<div class="dphoto">-->
+                    <!--<img src="{{this.imagePath}}" height="150" width="300">-->
+                <!--</div>-->
+
                 {{#if article.comments}}
                     <ul class="comments">
                         {{#each article.comments}}
@@ -22,8 +26,8 @@
                 {{/if}}
 
 
-                <form action="/article/postComment/{{article.id}}" id="usrform" method="post">
-                    <textarea name="content" form="usrform"></textarea>
+                <form action="/article/postComment/{{article.id}}" id="comment" method="post">
+                    <textarea name="content" form="comment"></textarea>
                     <button type="submit">Напиши коментар</button>
                 </form>
 
