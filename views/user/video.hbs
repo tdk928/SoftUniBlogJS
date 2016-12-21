@@ -1,6 +1,8 @@
+
 <div class="container body-content">
     <form class="form-horizontal" method="POST" action="/user/video/" encType="multipart/form-data">
-
+        <h3>Тук е мястото където може да качвате вашите любителски или професионални видео уроци по математика:</h3>
+        <hr>
         <div class="form-group">
             <div class="col-sm-12">
                 <label for="title">Име на видеото</label>
@@ -16,9 +18,6 @@
                 <button type="submit" class="btn btn-primary">Потвърди</button>
             </div>
         </div>
-
-
-
     </form>
 
 
@@ -33,7 +32,7 @@
                     <video width="600" controls>
                         <source src="{{ this.videoPath }}" type="video/mp4">
                     </video>
-                    {{this.author}}
+                    Потребител: {{this.author}}
                 </header>
             </div>
         </div>

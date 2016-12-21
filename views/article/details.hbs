@@ -15,7 +15,8 @@
                     <ul class="comments">
                         {{#each article.comments}}
                             <li class="comment">{{this.content}}</li>
-                            <small class="author">{{this.author}}</small>
+                             <small class="author">Добавено от: {{this.author}}</small>
+                            <hr>
                         {{/each}}
                     </ul>
                 {{/if}}
