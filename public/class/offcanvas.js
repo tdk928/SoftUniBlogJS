@@ -1,11 +1,4 @@
 
-function kajimikvosumizbral(nomeraelementa){
-    var otgovor = $('input[name=Q'+nomernaelementa+'Choice]').val();
-    var actotgovor = $('input#'+otgovor).text();
-    console.log('user-a e natisnal otg.'+otgovor);
-    console.log('user-a e izbral otg.'+actotgovor);
-
-}
 
 function opcno(a, b) {
     document.getElementById ? obj = document.getElementById("example" + a + b) : document.all && (obj = document.all["example" + a + b])

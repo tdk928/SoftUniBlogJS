@@ -215,24 +215,19 @@ module.exports = {
 
     videoPost: (req, res) => {
 
-
-
-        let file;
-        let videoArgs = req.body;
-        videoArgs.author = req.user.id;
-
         let errorMsg = '';
-
-        if (!req.isAuthenticated()) {
-            errorMsg = 'You should be logged in to make articles!'
-        } else if (!videoArgs.title) {
-            errorMsg = 'Invalid title!';
+        if (!req.user) {
+            errorMsg = 'You should be logged in to upload videos!'
         }
-
         if (errorMsg) {
             res.render('user/video', {error: errorMsg});
             return;
         }
+
+        let file;
+        let videoArgs = req.body;
+        videoArgs.author = req.user.id;
+        // videoArgs.title = req.videos.title;
 
         file = req.files.file;
 

@@ -26,6 +26,7 @@
 
 
     {{#each videos}}
+        Име на видеото: {{this.title}}
         <div class="row">
             <div class="col-md-6">
                 <header><h2><a href="/uploadVideos/{{ this.videoPath }}"> </a></h2>
@@ -33,6 +34,7 @@
                         <source src="{{ this.videoPath }}" type="video/mp4">
                     </video>
                     Потребител: {{this.author}}
+
                 </header>
             </div>
         </div>
