@@ -70,6 +70,7 @@ module.exports.seedAdmin = () => {
 
     //търся в базата има ли такъв User и ако има неправя нищо ако няма ->
     User.findOne({email: email}).then(admin => {
+        //питаме базата имаме ли потребител с служебния емайл, то ест няма и си го създавам
         if(!admin) {
             Role.findOne({name: 'Admin'}).then(role => {
                 let salt = encryption.generateSalt();

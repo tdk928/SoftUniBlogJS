@@ -3,9 +3,7 @@
         <div class="col-md-12">
             <article>
                 <header><h2>{{article.title}}</h2></header>
-                <div class="dphoto">
-                    <img src="{{this.imagePath}}" height="150" width="300">
-                </div>
+
                 <p>
                     {{article.content}}
                 </p>
@@ -17,7 +15,7 @@
                     <ul class="comments">
                         {{#each article.comments}}
                             <li class="comment">{{this.content}}</li>
-                            <small class="author">{{this.author.fullName}}</small>
+                            <small class="author">{{this.author}}</small>
                         {{/each}}
                     </ul>
                 {{/if}}

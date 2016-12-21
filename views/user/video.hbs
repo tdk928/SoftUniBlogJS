@@ -31,17 +31,12 @@
             <div class="col-md-6">
                 <header><h2><a href="/uploadVideos/{{ this.videoPath }}"> </a></h2>
                     <video width="600" controls>
-                        <source src="{{this.videoPath}}" type="video/mp4">
+                        <source src="{{ this.videoPath }}" type="video/mp4">
                     </video>
+                    {{this.author}}
                 </header>
             </div>
         </div>
         <hr>
     {{/each}}
 </div>
-
-
-
-
-
-

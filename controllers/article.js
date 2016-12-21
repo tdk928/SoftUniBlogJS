@@ -202,11 +202,7 @@ module.exports = {
                     article.save();
 
                     res.redirect(`/article/details/${articleId}`)
-                }).catch(err => {
-                    console.log(err)
                 });
-            }).catch(err => {
-                console.log(err)
             });
         }
     },
@@ -219,8 +215,10 @@ module.exports = {
 
     videoPost: (req, res) => {
 
+
         let file;
-        let articleArgs = req.body;
+        let videoArgs = req.body;
+        videoArgs.author = req.user.id;
 
         file = req.files.file;
 
@@ -228,15 +226,11 @@ module.exports = {
             file.mv(`./public/uploadVideos/${file.name}`, function (err) {
             });
 
-            articleArgs.videoPath = `/uploadVideos/${file.name}`;
-            Video.create(articleArgs).then(()=> {
+            videoArgs.videoPath = `/uploadVideos/${file.name}`;
+            Video.create(videoArgs).then(()=> {
                 res.redirect('/user/video');
             });
         }
     }
 
 };
-
-
-
-

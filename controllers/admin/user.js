@@ -5,7 +5,7 @@ const encryption = require('./../../utilities/encryption');
 module.exports = {
     all: (req, res) => {
         User.find({}).then(users => {
-
+            //за всеки един User провери дали е Админ
             for (let user of users) {
                 user.isInRole('Admin').then(isAdmin => {
                     user.isAdmin = isAdmin;
